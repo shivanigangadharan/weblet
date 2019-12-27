@@ -19,6 +19,10 @@ const Email = styled.input`
    padding-top: 2%;
    padding-bottom: 2%;
     margin-top: 2%;
+    @media screen and (max-width: 600px){
+        width: 90%;
+    }
+   
 `
 const Submit = styled.input`
     background: orange;
@@ -50,6 +54,15 @@ const Main = styled.div`
     padding-bottom: 3%;
     text-align: left;
     width: 40%;
+    @media screen and (max-width: 600px){
+        width: 90%;
+    }
+    @media screen and (max-width: 992px){
+        width: 80%;
+    }
+    @media screen and (max-width: 1200px){
+        width: 80%;
+    }
 `
 const Tick = styled.text`
     font-size: 2rem;
@@ -61,6 +74,12 @@ const Mini = styled.text`
 const Flex = styled.text`
 display: flex;
 margin-top: 7%;
+`
+const Form = styled.form`
+    margin-left: 20%;
+    @media screen and (max-width: 600px){
+        margin-left: 10%;
+    }
 `
 function Dialog() {
     const [check, setCheck] = useState();
@@ -81,9 +100,7 @@ function Dialog() {
 
                     </Mini>
                 </Text>
-                <form style={{
-                    'margin-left': '20%'
-                }}>
+                <Form>
                     <Email type="email" placeholder="Your email" required /> <br />
                     <Accept>
                         <input width="20px" type="checkbox" required />
@@ -92,7 +109,7 @@ function Dialog() {
                     </Accept>
                     <br />
                     <Submit type="submit" value="Continue" />
-                </form>
+                </Form>
 
             </Main>
         </center >
