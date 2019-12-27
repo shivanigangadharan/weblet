@@ -8,6 +8,9 @@ const Text = styled.div`
     padding-left: 20%;
     padding-right: 20%;
     font-size: 1.2rem;
+    @media screen and (max-width: 600px){
+        padding-left: 5%;
+        padding-right: 5%;    }
 `
 const Email = styled.input`
    border: 1px solid orange;
@@ -55,7 +58,7 @@ const Main = styled.div`
     text-align: left;
     width: 40%;
     @media screen and (max-width: 600px){
-        width: 90%;
+        width: 98%;
     }
     @media screen and (max-width: 992px){
         width: 80%;
